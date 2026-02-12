@@ -14,11 +14,11 @@ jobs:
               uses: actions/checkout@v4
 
             - name: Deploy
-              uses: appleboy/ssh-action@v1.0.3
+              uses: appleboy/ssh-action@v1.2.5
               with:
                 host: 13.203.208.2
                 username: cloudshell-user
-                key: ${{ secrets.SSH_KEY}}
+                key: ${{ secrets.SSH_KEY }}
                 script: | 
                     cd /home.cloudshell-user/node-application-githubaction
                     git pull
